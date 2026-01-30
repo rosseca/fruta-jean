@@ -35,6 +35,8 @@ struct SmoothieView: View {
             .background()
             .navigationTitle(smoothie.title)
             .toolbar {
+                ShareLink(item: smoothie, preview: SharePreview(
+                    smoothie.title, image: smoothie.image))
                 SmoothieFavoriteButton()
                     .environmentObject(model)
             }
